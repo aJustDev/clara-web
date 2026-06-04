@@ -10,9 +10,9 @@ import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 import { site, areas, faqs } from "../data/site";
 
-const title = `${site.nombre} | Psicologa en Cordoba - Presencial y online`;
+const title = `${site.nombre} | Psicóloga en Córdoba - Presencial y online`;
 const description =
-  "Psicologa en Cordoba. Terapia presencial y online para ansiedad, depresion, autoestima, pareja y duelo. Pide cita por WhatsApp, sin compromiso.";
+  "Psicóloga en Córdoba. Terapia presencial y online para ansiedad, depresión, autoestima, pareja y duelo. Pide cita por WhatsApp, sin compromiso.";
 
 // JSON-LD: ficha de negocio local para SEO (Google rich results / mapa de conocimiento).
 const jsonLd = {
@@ -39,8 +39,8 @@ const jsonLd = {
     longitude: site.geo.lng,
   },
   areaServed: [
-    { "@type": "City", name: "Cordoba" },
-    { "@type": "Country", name: "Espana" },
+    { "@type": "City", name: "Córdoba" },
+    { "@type": "Country", name: "España" },
   ],
   availableLanguage: ["es"],
   knowsAbout: areas.map((a) => a.title),

@@ -3,9 +3,9 @@ import { site } from "../data/site";
 import WhatsAppButton from "./WhatsAppButton.astro";
 
 const links = [
-  { href: "#sobre-mi", label: "Sobre mi" },
-  { href: "#areas", label: "Areas" },
-  { href: "#como-trabajo", label: "Como trabajo" },
+  { href: "#sobre-mi", label: "Sobre mí" },
+  { href: "#areas", label: "Áreas" },
+  { href: "#como-trabajo", label: "Cómo trabajo" },
   { href: "#preguntas", label: "Preguntas" },
 ];
 ---
@@ -30,7 +30,7 @@ const links = [
       <span class="name">{site.nombre}</span>
     </a>
 
-    <nav class="links" aria-label="Navegacion principal">
+    <nav class="links" aria-label="Navegación principal">
       {links.map((l) => <a href={l.href}>{l.label}</a>)}
     </nav>
 

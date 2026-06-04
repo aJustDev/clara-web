@@ -3,9 +3,9 @@
 
 export const site = {
   nombre: "Clara Luque de la Campa",
-  rol: "Psicologa",
+  rol: "Psicóloga",
   // Frase corta para meta description / footer.
-  claim: "Psicologa en Cordoba. Terapia presencial y online.",
+  claim: "Psicóloga en Córdoba. Terapia presencial y online.",
 
   // --- Contacto ---
   // Telefono de WhatsApp en formato internacional SIN '+' ni espacios. TODO: numero real.
@@ -14,7 +14,7 @@ export const site = {
   email: "hola@claraluquepsicologia.es",
   // Mensaje pre-rellenado al abrir WhatsApp.
   mensajeCita:
-    "Hola Clara, me gustaria pedir cita o informacion sobre las sesiones.",
+    "Hola Clara, me gustaría pedir cita o información sobre las sesiones.",
 
   // --- Datos profesionales (confianza + SEO/E-E-A-T) ---
   // TODO: numero de colegiada del COP Andalucia Occidental (ej. "AO-XXXXX").
@@ -25,8 +25,8 @@ export const site = {
     // TODO: calle y numero de la consulta.
     calle: "Calle de la Consulta, 0",
     cp: "14001",
-    ciudad: "Cordoba",
-    region: "Cordoba",
+    ciudad: "Córdoba",
+    region: "Córdoba",
     pais: "ES",
   },
   // TODO: coordenadas exactas de la consulta (placeholder = centro de Cordoba).
@@ -48,33 +48,33 @@ export const site = {
 export const areas = [
   {
     icon: "cloud",
-    title: "Ansiedad y estres",
-    desc: "Herramientas para entender y reducir la ansiedad, el estres y los ataques de panico.",
+    title: "Ansiedad y estrés",
+    desc: "Herramientas para entender y reducir la ansiedad, el estrés y los ataques de pánico.",
   },
   {
     icon: "sprout",
-    title: "Depresion y estado de animo",
-    desc: "Acompanamiento ante la apatia, la tristeza sostenida y la perdida de motivacion.",
+    title: "Depresión y estado de ánimo",
+    desc: "Acompañamiento ante la apatía, la tristeza sostenida y la pérdida de motivación.",
   },
   {
     icon: "spark",
     title: "Autoestima y desarrollo personal",
-    desc: "Trabajo sobre la autoestima, la autoexigencia y la relacion contigo misma.",
+    desc: "Trabajo sobre la autoestima, la autoexigencia y la relación contigo misma.",
   },
   {
     icon: "link",
     title: "Terapia de pareja",
-    desc: "Espacio para mejorar la comunicacion, los conflictos y los vinculos en la relacion.",
+    desc: "Espacio para mejorar la comunicación, los conflictos y los vínculos en la relación.",
   },
   {
     icon: "heart",
-    title: "Duelo y perdidas",
-    desc: "Apoyo para transitar el duelo, las rupturas y los cambios vitales dificiles.",
+    title: "Duelo y pérdidas",
+    desc: "Apoyo para transitar el duelo, las rupturas y los cambios vitales difíciles.",
   },
   {
     icon: "compass",
-    title: "Gestion emocional",
-    desc: "Aprender a reconocer, regular y expresar las emociones en el dia a dia.",
+    title: "Gestión emocional",
+    desc: "Aprender a reconocer, regular y expresar las emociones en el día a día.",
   },
 ] as const;
 
@@ -87,36 +87,36 @@ export const pasos = [
   },
   {
     n: "02",
-    title: "Primera sesion",
-    desc: "Nos conocemos, cuentas que te trae a terapia y definimos juntas unos objetivos.",
+    title: "Primera sesión",
+    desc: "Nos conocemos, cuentas qué te trae a terapia y definimos juntas unos objetivos.",
   },
   {
     n: "03",
-    title: "Proceso terapeutico",
-    desc: "Avanzamos a tu ritmo, presencial en Cordoba u online, con un plan adaptado a ti.",
+    title: "Proceso terapéutico",
+    desc: "Avanzamos a tu ritmo, presencial en Córdoba u online, con un plan adaptado a ti.",
   },
 ] as const;
 
 // --- Preguntas frecuentes ---
 export const faqs = [
   {
-    q: "Haces terapia online?",
-    a: "Si. Puedes elegir sesiones presenciales en mi consulta de Cordoba o por videollamada, con la misma calidad y confidencialidad.",
+    q: "¿Haces terapia online?",
+    a: "Sí. Puedes elegir sesiones presenciales en mi consulta de Córdoba o por videollamada, con la misma calidad y confidencialidad.",
   },
   {
-    q: "Cuanto dura una sesion?",
-    a: "Cada sesion dura aproximadamente 50-60 minutos. La frecuencia la ajustamos a tu situacion y a como avanza el proceso.",
+    q: "¿Cuánto dura una sesión?",
+    a: "Cada sesión dura aproximadamente 50-60 minutos. La frecuencia la ajustamos a tu situación y a cómo avanza el proceso.",
   },
   {
-    q: "Cuanto cuesta?",
+    q: "¿Cuánto cuesta?",
     a: "Puedes consultarme la tarifa actualizada por WhatsApp. Te informo sin compromiso antes de empezar.", // TODO: publicar precio si se desea.
   },
   {
-    q: "Es todo confidencial?",
-    a: "Por completo. Todo lo que compartas esta protegido por el secreto profesional y la normativa de proteccion de datos.",
+    q: "¿Es todo confidencial?",
+    a: "Por completo. Todo lo que compartas está protegido por el secreto profesional y la normativa de protección de datos.",
   },
   {
-    q: "Como pido cita?",
-    a: "El modo mas rapido es por WhatsApp. Me escribes, vemos tu disponibilidad y reservamos la primera sesion.",
+    q: "¿Cómo pido cita?",
+    a: "El modo más rápido es por WhatsApp. Me escribes, vemos tu disponibilidad y reservamos la primera sesión.",
   },
 ] as const;
