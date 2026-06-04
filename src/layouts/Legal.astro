@@ -1,0 +1,72 @@
+---
+import Base from "./Base.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  heading: string;
+}
+
+const { title, description, path, heading } = Astro.props;
+---
+
+<Base title={title} description={description} path={path}>
+  <main class="legal container">
+    <a class="back" href={`${import.meta.env.BASE_URL}/`}>&larr; Volver al inicio</a>
+    <h1>{heading}</h1>
+    <article class="body">
+      <slot />
+    </article>
+  </main>
+  <Footer />
+</Base>
+
+<style is:global>
+  .legal {
+    padding-block: clamp(3rem, 8vw, 5rem);
+    max-width: 760px;
+  }
+  .legal .back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--text-muted);
+  }
+  .legal .back:hover {
+    color: var(--accent);
+  }
+  .legal h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.5rem;
+  }
+  .legal .body h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem;
+    color: var(--text);
+  }
+  .legal .body p,
+  .legal .body li {
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+  .legal .body ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .legal .note {
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+</style>

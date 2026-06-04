@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-label="Foto de Clara en consulta (placeholder)">
+  <rect width="480" height="560" fill="#e8efe6" />
+  <circle cx="240" cy="215" r="85" fill="#cdddc6" />
+  <path d="M110 490 C110 375 165 330 240 330 C315 330 370 375 370 490 Z" fill="#cdddc6" />
+  <text x="240" y="535" text-anchor="middle" fill="#5b7a5a" font-family="Georgia, serif" font-style="italic" font-size="24">Foto en consulta</text>
+</svg>

@@ -1,0 +1,90 @@
+---
+import { site } from "../data/site";
+
+interface Props {
+  label?: string;
+  variant?: "solid" | "outline";
+  size?: "md" | "lg";
+  class?: string;
+}
+
+const {
+  label = "Pedir cita",
+  variant = "solid",
+  size = "md",
+  class: extra = "",
+} = Astro.props;
+
+const href = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
+  site.mensajeCita
+)}`;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener"
+  class:list={["wa", variant, size, extra]}
+  aria-label={`${label} por WhatsApp`}
+>
+  <svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path
+      fill="currentColor"
+      d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 1.8c2.16 0 4.19.84 5.72 2.37a8.06 8.06 0 0 1 2.37 5.74c0 4.48-3.65 8.12-8.13 8.12-1.46 0-2.9-.39-4.15-1.13l-.3-.18-3.11.82.83-3.04-.2-.31a8.06 8.06 0 0 1-1.24-4.31c0-4.48 3.64-8.12 8.13-8.12Zm4.66 10.18c-.25-.13-1.5-.74-1.74-.82-.23-.09-.4-.13-.57.13-.17.25-.65.81-.8.98-.15.17-.29.19-.54.06-.25-.13-1.07-.39-2.04-1.26-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43-.15-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.5-.61 1.71-1.2.21-.59.21-1.1.15-1.2-.06-.11-.23-.17-.48-.3Z"
+    ></path>
+  </svg>
+  <span>{label}</span>
+</a>
+
+<style>
+  .wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition:
+      background 200ms ease,
+      color 200ms ease,
+      border-color 200ms ease,
+      transform 200ms ease;
+  }
+  .wa:hover {
+    transform: translateY(-1px);
+  }
+
+  .ico {
+    width: 1.15em;
+    height: 1.15em;
+    flex-shrink: 0;
+  }
+
+  .md {
+    padding: 0.85rem 1.4rem;
+    font-size: 0.98rem;
+  }
+  .lg {
+    padding: 1rem 1.7rem;
+    font-size: 1.05rem;
+  }
+
+  .solid {
+    background: var(--accent);
+    color: #fff;
+  }
+  .solid:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+
+  .outline {
+    background: var(--surface);
+    color: var(--accent);
+    border: 1px solid var(--border-strong);
+  }
+  .outline:hover {
+    color: var(--accent-hover);
+    border-color: var(--accent);
+  }
+</style>

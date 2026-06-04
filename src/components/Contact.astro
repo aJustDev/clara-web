@@ -1,0 +1,131 @@
+---
+import { site } from "../data/site";
+import WhatsAppButton from "./WhatsAppButton.astro";
+
+const telDisplay = `+${site.whatsapp.slice(0, 2)} ${site.whatsapp.slice(2)}`;
+---
+
+<section id="contacto" class="contact" aria-labelledby="contact-title">
+  <div class="container card">
+    <div class="copy">
+      <h2 id="contact-title" class="title">Pide tu cita</h2>
+      <p class="lead">
+        El primer paso es el mas importante. Escribeme por WhatsApp y vemos
+        juntas como empezar, sin compromiso.
+      </p>
+      <div class="cta-row">
+        <WhatsAppButton label="Escribir por WhatsApp" size="lg" />
+        <a class="mail" href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+    </div>
+
+    <ul class="info">
+      <li>
+        <span class="label">Consulta</span>
+        <span class="value">
+          {site.direccion.calle}<br />
+          {site.direccion.cp} {site.direccion.ciudad}
+        </span>
+      </li>
+      <li>
+        <span class="label">Modalidad</span>
+        <span class="value">Presencial en Cordoba y online</span>
+      </li>
+      <li>
+        <span class="label">Horario</span>
+        <span class="value">{site.horario}</span>
+      </li>
+      <li>
+        <span class="label">Telefono</span>
+        <span class="value">{telDisplay}</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding-block: var(--section-py);
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: clamp(1.75rem, 4vw, 3rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media (min-width: 880px) {
+    .card {
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--text);
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .lead {
+    color: var(--text-muted);
+    max-width: 46ch;
+    margin: 0 0 1.75rem;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .mail {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .mail:hover {
+    color: var(--accent);
+  }
+
+  .info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.1rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.75rem;
+  }
+  @media (min-width: 880px) {
+    .info {
+      border-top: none;
+      border-left: 1px solid var(--border);
+      padding-top: 0;
+      padding-left: 2.5rem;
+    }
+  }
+  .info li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .value {
+    color: var(--text);
+    font-size: 0.97rem;
+  }
+</style>

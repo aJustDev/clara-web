@@ -1,0 +1,53 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { site } from "../data/site";
+---
+
+<Legal
+  title={`Aviso legal | ${site.nombre}`}
+  description="Aviso legal e informacion del titular del sitio web."
+  path="/aviso-legal"
+  heading="Aviso legal"
+>
+  <p class="note">
+    TODO: revisar este texto con los datos reales antes de publicar. Plantilla
+    orientativa, no asesoramiento juridico.
+  </p>
+
+  <h2>Titular del sitio</h2>
+  <ul>
+    <li>Titular: {site.nombre}</li>
+    <li>Actividad: {site.rol} (colegiada n.&nbsp;{site.numColegiada})</li>
+    <li>Domicilio: {site.direccion.calle}, {site.direccion.cp} {site.direccion.ciudad}</li>
+    <li>Email: {site.email}</li>
+    <li>NIF: TODO</li>
+  </ul>
+
+  <h2>Objeto</h2>
+  <p>
+    Este sitio web tiene caracter informativo sobre los servicios de psicologia
+    de {site.nombre}. El acceso y uso del sitio atribuye la condicion de usuario
+    e implica la aceptacion de las condiciones recogidas en este aviso legal.
+  </p>
+
+  <h2>Propiedad intelectual</h2>
+  <p>
+    Los contenidos de este sitio (textos, imagenes y diseno) son titularidad de
+    {site.nombre} o de terceros que han autorizado su uso, y estan protegidos
+    por la normativa de propiedad intelectual. No se permite su reproduccion sin
+    autorizacion expresa.
+  </p>
+
+  <h2>Responsabilidad</h2>
+  <p>
+    La informacion del sitio tiene finalidad divulgativa y no sustituye una
+    valoracion psicologica individual. {site.nombre} no se responsabiliza del
+    uso que terceros hagan de la informacion publicada.
+  </p>
+
+  <h2>Legislacion aplicable</h2>
+  <p>
+    Este aviso legal se rige por la legislacion espanola. Para cualquier
+    controversia, las partes se someten a los juzgados y tribunales de Cordoba.
+  </p>
+</Legal>

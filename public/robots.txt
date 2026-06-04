@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ajustdev.github.io/clara-web/sitemap-index.xml

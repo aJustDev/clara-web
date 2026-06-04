@@ -1,0 +1,111 @@
+---
+import { site } from "../data/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container row">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="15" fill="currentColor"></circle>
+          <text
+            x="16"
+            y="22"
+            text-anchor="middle"
+            fill="#f7f4ee"
+            font-family="Instrument Serif, Georgia, serif"
+            font-size="18"
+            font-style="italic">C</text
+          >
+        </svg>
+      </span>
+      <span class="name">{site.nombre}</span>
+      <span class="tag">{site.rol} en Cordoba</span>
+    </div>
+    <nav class="links" aria-label="Enlaces legales">
+      <a href={`${import.meta.env.BASE_URL}/aviso-legal`}>Aviso legal</a>
+      <a href={`${import.meta.env.BASE_URL}/privacidad`}>Privacidad</a>
+    </nav>
+  </div>
+  <div class="container small">
+    <span>&copy; {year} {site.nombre}</span>
+    <span class="loc">Cordoba, Espana &middot; Colegiada n.&nbsp;{site.numColegiada}</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    padding-block: 2.5rem 1.5rem;
+    margin-top: 2rem;
+    background: var(--surface);
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  @media (min-width: 720px) {
+    .row {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  .mark {
+    color: var(--accent);
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+  }
+  .name {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    color: var(--text);
+  }
+  .tag {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.92rem;
+  }
+  .links a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .links a:hover {
+    color: var(--accent);
+  }
+
+  .small {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .loc {
+    font-style: italic;
+  }
+</style>

@@ -1,0 +1,75 @@
+---
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Areas from "../components/Areas.astro";
+import Steps from "../components/Steps.astro";
+import Faq from "../components/Faq.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import { site, areas, faqs } from "../data/site";
+
+const title = `${site.nombre} | Psicologa en Cordoba - Presencial y online`;
+const description =
+  "Psicologa en Cordoba. Terapia presencial y online para ansiedad, depresion, autoestima, pareja y duelo. Pide cita por WhatsApp, sin compromiso.";
+
+// JSON-LD: ficha de negocio local para SEO (Google rich results / mapa de conocimiento).
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  name: site.nombre,
+  description,
+  url: site.dominio,
+  image: `${site.dominio}/images/clara-retrato.svg`,
+  telephone: `+${site.whatsapp}`,
+  email: site.email,
+  priceRange: "EUR",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: site.direccion.calle,
+    postalCode: site.direccion.cp,
+    addressLocality: site.direccion.ciudad,
+    addressRegion: site.direccion.region,
+    addressCountry: site.direccion.pais,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: site.geo.lat,
+    longitude: site.geo.lng,
+  },
+  areaServed: [
+    { "@type": "City", name: "Cordoba" },
+    { "@type": "Country", name: "Espana" },
+  ],
+  availableLanguage: ["es"],
+  knowsAbout: areas.map((a) => a.title),
+  ...(site.sameAs.length > 0 ? { sameAs: site.sameAs } : {}),
+};
+
+// FAQPage: permite que las preguntas aparezcan enriquecidas en Google.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const graph = { "@context": "https://schema.org", "@graph": [jsonLd, faqLd] };
+---
+
+<Base title={title} description={description} path="/" jsonLd={graph}>
+  <Nav />
+  <main>
+    <Hero />
+    <About />
+    <Areas />
+    <Steps />
+    <Faq />
+    <Contact />
+  </main>
+  <Footer />
+</Base>

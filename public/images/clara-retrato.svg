@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 640" role="img" aria-label="Foto de Clara (placeholder)">
+  <rect width="520" height="640" fill="#e8efe6" />
+  <circle cx="260" cy="250" r="95" fill="#cdddc6" />
+  <path d="M120 560 C120 430 180 380 260 380 C340 380 400 430 400 560 Z" fill="#cdddc6" />
+  <text x="260" y="615" text-anchor="middle" fill="#5b7a5a" font-family="Georgia, serif" font-style="italic" font-size="26">Foto de Clara</text>
+</svg>
