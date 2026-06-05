@@ -19,5 +19,5 @@ yarn-error.log*
 .vscode/
 .idea/
 # ficheros de trabajo (no versionar)
-instruciones_clara.pdf
+*.pdf
 public/images/clarina*.png
