@@ -104,12 +104,12 @@ export const pasos = [
   {
     n: "02",
     title: "Primera sesión",
-    desc: "Si estás de acuerdo y deseas iniciar tu proceso terapéutico, agendamos una primera sesión en la que iniciaremos el proceso de evaluación y la recogida de información relevante, y empezaré a conocer tu historia y tu contexto. En esta sesión definiremos unos objetivos que guíen el trabajo en terapia.",
+    desc: "Si estás de acuerdo y deseas iniciar tu proceso terapéutico, agendamos una primera sesión en la que iniciaremos el proceso de evaluación. Empezaré a conocer tu historia y tu contexto. En esta sesión definiremos unos objetivos que serán los que guíen el trabajo en terapia.",
   },
   {
     n: "03",
     title: "Proceso terapéutico",
-    desc: "Agendaremos las próximas sesiones de acuerdo con tu caso particular y tus circunstancias. Lo ideal es una frecuencia mayor en la fase de evaluación (una vez por semana) e ir espaciando las sesiones conforme logramos progreso. La meta siempre es tu autonomía: que en las mínimas sesiones posibles obtengas las herramientas que necesitas para continuar sin mi ayuda.",
+    desc: "Agendaremos las próximas sesiones de acuerdo con tu caso particular y tus circunstancias.",
   },
 ] as const;
 

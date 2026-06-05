@@ -16,57 +16,14 @@ import { site } from "../data/site";
 
     <div class="copy">
       <h2 id="enfoque-title" class="section-title">Mi enfoque terapéutico</h2>
-
-      <h3 class="sub-title">Desde dónde trabajo</h3>
       <p>
         Trabajo bajo el marco del conductismo y de las terapias contextuales, en
         particular de la Terapia de Aceptación y Compromiso (ACT), por ser el
-        enfoque con mayor soporte empírico en la actualidad.
-      </p>
-      <p>
-        Me enamoré profundamente de la forma en que estas terapias conceptualizan
-        el sufrimiento humano: no como algo patológico, un error de
-        funcionamiento o un fallo del cerebro, sino como una parte inevitable de
-        la experiencia humana, fruto de los propios vaivenes de la vida y de
-        nuestra historia de aprendizaje.
-      </p>
-
-      <h3 class="sub-title">La lucha que te aleja de lo que importa</h3>
-      <p>
-        Tenemos muy interiorizado que los malestares no deben estar, que deben
-        corregirse cuanto antes, controlarse, porque lo normal y sano es sentirse
-        bien. Y tal vez eso te haya conducido a una batalla incesante contra la
-        ansiedad, o contra tu tristeza, tu dolor o tu miedo.
-      </p>
-      <p>
-        Una lucha que quizás ocupa cada vez más espacio en tu vida, y ha ido
-        desplazando aquello que te importa, alejándote de la persona que te
-        gustaría ser. Paradójicamente, pese a todo el esfuerzo por deshacerte de
-        ello, no desaparece.
-      </p>
-
-      <h3 class="sub-title">Qué haremos en terapia</h3>
-      <p>
-        El proceso terapéutico consistirá, por un lado, en analizar y comprender
-        las razones (que siempre, siempre las hay) que han generado y mantienen el
-        malestar por el que acudes a terapia, y por otro en trabajar para que poco
-        a poco vayas recuperando las parcelas de tu vida que ahora mismo están
-        dominadas por la lucha interminable contra ese malestar. El propósito es
-        hacer posible construir la vida que deseas vivir.
-      </p>
-
-      <h3 class="sub-title">Presencial u online, tú eliges</h3>
-      <p>
-        Atiendo de forma presencial en mi consulta de Córdoba, un espacio cuidado
-        al detalle, construido desde el amor por mi profesión y el respeto a las
-        historias que se contarán en él. Además, siempre reservo una parte de mi
-        agenda para personas que prefieren el formato online, a través de
-        videollamada. El proceso es tuyo y tú eliges el formato.
+        enfoque con mayor evidencia científica.
       </p>
 
       <ul class="facts">
-        <li><span aria-hidden="true">&#9670;</span> Terapia presencial en Córdoba</li>
-        <li><span aria-hidden="true">&#9670;</span> Terapia online por videollamada</li>
+        <li><span aria-hidden="true">&#9670;</span> Terapia presencial en Córdoba y online</li>
         <li><span aria-hidden="true">&#9670;</span> Sesiones individuales y de pareja</li>
         <li><span aria-hidden="true">&#9670;</span> Psicóloga colegiada n.º&nbsp;{site.numColegiada}</li>
       </ul>
@@ -83,13 +40,16 @@ import { site } from "../data/site";
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.5rem;
-    align-items: start;
+    align-items: center;
   }
 
   @media (min-width: 880px) {
     .grid {
-      grid-template-columns: 0.85fr 1.15fr;
+      grid-template-columns: 0.8fr 1.2fr;
       gap: 3.5rem;
+    }
+    .media {
+      order: 0; /* escritorio: la foto vuelve a la izquierda */
     }
   }
 
@@ -97,12 +57,7 @@ import { site } from "../data/site";
     justify-self: center;
     width: 100%;
     max-width: 300px;
-  }
-  @media (min-width: 880px) {
-    .media {
-      position: sticky;
-      top: calc(var(--nav-h) + 1.5rem);
-    }
+    order: 1; /* movil: la foto va debajo del texto */
   }
   .media img {
     width: 100%;
@@ -124,26 +79,16 @@ import { site } from "../data/site";
     letter-spacing: -0.005em;
   }
 
-  .sub-title {
-    font-family: var(--font-display);
-    font-weight: 400;
-    font-size: 1.4rem;
-    color: var(--accent);
-    margin: 2rem 0 0.65rem;
-    letter-spacing: -0.005em;
-  }
-
   .copy p {
     color: var(--text-muted);
     margin: 0 0 1rem;
-    max-width: 60ch;
+    max-width: 56ch;
   }
 
   .facts {
     list-style: none;
-    margin: 2rem 0 0;
-    padding: 1.5rem 0 0;
-    border-top: 1px solid var(--border);
+    margin: 1.5rem 0 0;
+    padding: 0;
     display: grid;
     gap: 0.6rem;
   }
