@@ -11,12 +11,14 @@ import WhatsAppButton from "./WhatsAppButton.astro";
         Psicóloga en Córdoba - Presencial y online
       </span>
       <h1 class="headline">
-        Un espacio para <em>cuidar</em> de ti, a tu ritmo.
+        Volver a lo que <em>importa</em>
       </h1>
       <p class="sub">
-        Soy {site.nombre}, psicóloga en Córdoba. Te acompaño en procesos de
-        ansiedad, estado de ánimo, autoestima y relaciones, con una terapia
-        cercana y adaptada a lo que necesitas.
+        Te doy la bienvenida a este espacio. Soy Clara (colegiada
+        n.º&nbsp;{site.numColegiada}), y he tenido el gran privilegio de
+        acompañar a muchas personas en su proceso de cambio a lo largo de mi
+        trayectoria como psicóloga. Un camino precioso lleno de retos y
+        aprendizajes.
       </p>
       <div class="cta-row">
         <WhatsAppButton label="Pedir cita" size="lg" />
@@ -26,10 +28,10 @@ import WhatsAppButton from "./WhatsAppButton.astro";
 
     <div class="hero-photo">
       <img
-        src={`${import.meta.env.BASE_URL}/images/clara-retrato.svg`}
+        src={`${import.meta.env.BASE_URL}/images/clara.jpeg`}
         alt={`${site.nombre}, psicóloga en Córdoba`}
-        width="520"
-        height="640"
+        width="1071"
+        height="1428"
         fetchpriority="high"
       />
     </div>
@@ -126,7 +128,7 @@ import WhatsAppButton from "./WhatsAppButton.astro";
   .hero-photo img {
     width: 100%;
     height: auto;
-    aspect-ratio: 13 / 16;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);

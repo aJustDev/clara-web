@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
 import Hero from "../components/Hero.astro";
-import About from "../components/About.astro";
+import Enfoque from "../components/Enfoque.astro";
 import Areas from "../components/Areas.astro";
 import Steps from "../components/Steps.astro";
 import Faq from "../components/Faq.astro";
@@ -21,7 +21,7 @@ const jsonLd = {
   name: site.nombre,
   description,
   url: site.dominio,
-  image: `${site.dominio}/images/clara-retrato.svg`,
+  image: `${site.dominio}/images/clara.jpeg`,
   telephone: `+${site.whatsapp}`,
   email: site.email,
   // address y geo solo se incluyen cuando hay consulta fisica (ver site.ts).
@@ -52,7 +52,7 @@ const jsonLd = {
     { "@type": "Country", name: "España" },
   ],
   availableLanguage: ["es"],
-  knowsAbout: areas.map((a) => a.title),
+  knowsAbout: areas.flatMap((a) => a.items),
   ...(site.sameAs.length > 0 ? { sameAs: site.sameAs } : {}),
 };
 
@@ -74,7 +74,7 @@ const graph = { "@context": "https://schema.org", "@graph": [jsonLd, faqLd] };
   <Nav />
   <main>
     <Hero />
-    <About />
+    <Enfoque />
     <Areas />
     <Steps />
     <Faq />

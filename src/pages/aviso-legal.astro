@@ -17,8 +17,12 @@ import { site } from "../data/site";
   <h2>Titular del sitio</h2>
   <ul>
     <li>Titular: {site.nombre}</li>
-    <li>Actividad: {site.rol} (colegiada n.&nbsp;{site.numColegiada})</li>
-    <li>Domicilio: {site.direccion.calle}, {site.direccion.cp} {site.direccion.ciudad}</li>
+    <li>Actividad: {site.rol} (colegiada n.º&nbsp;{site.numColegiada})</li>
+    <li>
+      Domicilio: {site.direccion.calle
+        ? `${site.direccion.calle}, ${site.direccion.cp} ${site.direccion.ciudad}`
+        : site.direccion.ciudad}
+    </li>
     <li>Email: {site.email}</li>
     <li>NIF: TODO</li>
   </ul>

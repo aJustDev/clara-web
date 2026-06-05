@@ -51,7 +51,11 @@ import { areas } from "../data/site";
               )}
             </div>
             <h3 class="card-title">{a.title}</h3>
-            <p class="card-desc">{a.desc}</p>
+            <ul class="card-list">
+              {a.items.map((it) => (
+                <li>{it}</li>
+              ))}
+            </ul>
           </article>
         ))
       }
@@ -141,10 +145,28 @@ import { areas } from "../data/site";
     margin: 0 0 0.5rem;
     letter-spacing: -0.005em;
   }
-  .card-desc {
+  .card-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+  .card-list li {
+    position: relative;
+    padding-left: 1rem;
     font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.5;
+  }
+  .card-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
   }
 </style>

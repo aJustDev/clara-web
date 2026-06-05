@@ -17,8 +17,8 @@ export const site = {
     "Hola Clara, me gustaría pedir cita o información sobre las sesiones.",
 
   // --- Datos profesionales (confianza + SEO/E-E-A-T) ---
-  // TODO: numero de colegiada del COP Andalucia Occidental (ej. "AO-XXXXX").
-  numColegiada: "AO-00000",
+  // Colegiada del COP Andalucia Occidental.
+  numColegiada: "AO-11167",
 
   // --- Ubicacion (NAP para SEO local) ---
   // Lanzamiento actual: online + presencial en Cordoba (cita previa), SIN calle.
@@ -48,36 +48,49 @@ export const site = {
 // --- Areas de trabajo (tarjetas) ---
 // icon: una de las claves soportadas en Areas.astro
 //   (sprout | heart | spark | cloud | link | compass)
+// Motivos de consulta agrupados por categoria. Cada tarjeta muestra su titulo
+// (categoria) y la lista de motivos reales. items[] alimenta knowsAbout (SEO).
 export const areas = [
   {
     icon: "cloud",
-    title: "Ansiedad y estrés",
-    desc: "Herramientas para entender y reducir la ansiedad, el estrés y los ataques de pánico.",
+    title: "Ansiedad, estrés y sueño",
+    items: ["Ansiedad y estrés", "Insomnio"],
   },
   {
     icon: "sprout",
-    title: "Depresión y estado de ánimo",
-    desc: "Acompañamiento ante la apatía, la tristeza sostenida y la pérdida de motivación.",
+    title: "Ánimo y autoestima",
+    items: ["Depresión y estado de ánimo", "Autoestima e inseguridades"],
   },
   {
     icon: "spark",
-    title: "Autoestima y desarrollo personal",
-    desc: "Trabajo sobre la autoestima, la autoexigencia y la relación contigo misma.",
+    title: "Miedos y obsesiones",
+    items: ["Miedos y fobias", "Obsesiones"],
   },
   {
     icon: "link",
-    title: "Terapia de pareja",
-    desc: "Espacio para mejorar la comunicación, los conflictos y los vínculos en la relación.",
+    title: "Pareja, sexualidad y familia",
+    items: [
+      "Terapia de pareja",
+      "Disfunciones sexuales",
+      "Problemas familiares",
+    ],
   },
   {
     icon: "heart",
-    title: "Duelo y pérdidas",
-    desc: "Apoyo para transitar el duelo, las rupturas y los cambios vitales difíciles.",
+    title: "Duelo, trauma y vínculos",
+    items: [
+      "Duelos y pérdidas",
+      "Historia de trauma o estrés postraumático",
+      "Rupturas tras maltrato y vínculos traumáticos",
+    ],
   },
   {
     icon: "compass",
-    title: "Gestión emocional",
-    desc: "Aprender a reconocer, regular y expresar las emociones en el día a día.",
+    title: "Sentido vital y decisiones",
+    items: [
+      "Falta de sentido vital o vacío existencial",
+      "Dificultad en la toma de decisiones",
+    ],
   },
 ] as const;
 
@@ -86,17 +99,17 @@ export const pasos = [
   {
     n: "01",
     title: "Primer contacto",
-    desc: "Me escribes por WhatsApp y resolvemos tus dudas. Buscamos un primer hueco sin compromiso.",
+    desc: "Me escribes por WhatsApp y resolvemos todas tus dudas. Aquí te ofreceré toda la información relativa a las sesiones, políticas del centro, marco terapéutico y tus derechos como paciente. Recibirás un PDF con todo.",
   },
   {
     n: "02",
     title: "Primera sesión",
-    desc: "Nos conocemos, cuentas qué te trae a terapia y definimos juntas unos objetivos.",
+    desc: "Si estás de acuerdo y deseas iniciar tu proceso terapéutico, agendamos una primera sesión en la que iniciaremos el proceso de evaluación y la recogida de información relevante, y empezaré a conocer tu historia y tu contexto. En esta sesión definiremos unos objetivos que guíen el trabajo en terapia.",
   },
   {
     n: "03",
     title: "Proceso terapéutico",
-    desc: "Avanzamos a tu ritmo, presencial en Córdoba u online, con un plan adaptado a ti.",
+    desc: "Agendaremos las próximas sesiones de acuerdo con tu caso particular y tus circunstancias. Lo ideal es una frecuencia mayor en la fase de evaluación (una vez por semana) e ir espaciando las sesiones conforme logramos progreso. La meta siempre es tu autonomía: que en las mínimas sesiones posibles obtengas las herramientas que necesitas para continuar sin mi ayuda.",
   },
 ] as const;
 
