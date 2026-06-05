@@ -24,20 +24,29 @@ const jsonLd = {
   image: `${site.dominio}/images/clara-retrato.svg`,
   telephone: `+${site.whatsapp}`,
   email: site.email,
-  priceRange: "EUR",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.direccion.calle,
-    postalCode: site.direccion.cp,
-    addressLocality: site.direccion.ciudad,
-    addressRegion: site.direccion.region,
-    addressCountry: site.direccion.pais,
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: site.geo.lat,
-    longitude: site.geo.lng,
-  },
+  // address y geo solo se incluyen cuando hay consulta fisica (ver site.ts).
+  // Hasta entonces, la zona de servicio se expresa con areaServed.
+  ...(site.direccion.calle
+    ? {
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: site.direccion.calle,
+          postalCode: site.direccion.cp,
+          addressLocality: site.direccion.ciudad,
+          addressRegion: site.direccion.region,
+          addressCountry: site.direccion.pais,
+        },
+      }
+    : {}),
+  ...(site.geo.lat
+    ? {
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: site.geo.lat,
+          longitude: site.geo.lng,
+        },
+      }
+    : {}),
   areaServed: [
     { "@type": "City", name: "Córdoba" },
     { "@type": "Country", name: "España" },

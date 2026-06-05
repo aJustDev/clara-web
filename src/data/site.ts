@@ -21,16 +21,19 @@ export const site = {
   numColegiada: "AO-00000",
 
   // --- Ubicacion (NAP para SEO local) ---
+  // Lanzamiento actual: online + presencial en Cordoba (cita previa), SIN calle.
+  // Mientras 'calle' este vacio, el JSON-LD omite address/geo y usa solo areaServed.
+  // TODO (septiembre): al abrir consulta, rellenar calle/cp/geo el MISMO dia que se
+  // cree el Google Business Profile, con NAP identico letra por letra.
   direccion: {
-    // TODO: calle y numero de la consulta.
-    calle: "Calle de la Consulta, 0",
-    cp: "14001",
+    calle: "",
+    cp: "",
     ciudad: "Córdoba",
     region: "Córdoba",
     pais: "ES",
   },
-  // TODO: coordenadas exactas de la consulta (placeholder = centro de Cordoba).
-  geo: { lat: 37.8845, lng: -4.7796 },
+  // TODO (septiembre): coordenadas exactas de la consulta (lat/lng del punto en Maps).
+  geo: { lat: null as number | null, lng: null as number | null },
   // TODO: horario real.
   horario: "Lunes a viernes, de 9:00 a 20:00",
 
