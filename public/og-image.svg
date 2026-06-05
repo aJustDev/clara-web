@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Clara Luque de la Campa, psicologa en Cordoba">
   <rect width="1200" height="630" fill="#f7f4ee" />
-  <circle cx="980" cy="180" r="320" fill="#e8efe6" />
-  <circle cx="60" cy="560" r="160" fill="#e8efe6" />
-  <text x="90" y="300" fill="#1f2620" font-family="Georgia, serif" font-style="italic" font-size="74">Clara Luque de la Campa</text>
-  <text x="92" y="372" fill="#5b7a5a" font-family="Arial, sans-serif" font-size="34">Psicóloga en Córdoba - Presencial y online</text>
+  <!-- Circulos decorativos en las esquinas, fuera de la zona segura cuadrada central (x 285-915). -->
+  <circle cx="1140" cy="90" r="240" fill="#e8efe6" />
+  <circle cx="70" cy="560" r="180" fill="#e8efe6" />
+  <!-- Texto centrado y en dos lineas para sobrevivir al recorte cuadrado de WhatsApp/IG. -->
+  <text x="600" y="255" text-anchor="middle" fill="#1f2620" font-family="Georgia, serif" font-style="italic" font-size="90">Clara Luque</text>
+  <text x="600" y="345" text-anchor="middle" fill="#1f2620" font-family="Georgia, serif" font-style="italic" font-size="90">de la Campa</text>
+  <text x="600" y="420" text-anchor="middle" fill="#5b7a5a" font-family="Arial, sans-serif" font-size="36">Psicóloga en Córdoba</text>
+  <text x="600" y="466" text-anchor="middle" fill="#8a9a82" font-family="Arial, sans-serif" font-size="30">Presencial y online</text>
 </svg>
